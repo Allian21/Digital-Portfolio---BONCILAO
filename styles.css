@@ -1,0 +1,167 @@
+/* general styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* navigation */
+nav {
+    position: fixed;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    background-color: rgba(31, 31, 31, 0.9);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 10px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #e0e0e0;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav ul li a:hover {
+    color: #0a95f9;
+    transform: scale(1.03); 
+}
+
+/* sections */
+section {
+    display: none;
+    padding: 30px;
+    background: #1f1f1f;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+section.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* cover section */
+.cover {
+    text-align: center;
+    padding: 30px;
+}
+
+.profile-picture {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 4px solid #000000;
+}
+
+/* project preview */
+.project-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 200px; 
+    margin: 10px;
+    background: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+/* image styling */
+.project-preview img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 8px;
+}
+
+/* title styling */
+.project-preview h3 {
+    margin-top: 10px;
+    color: #e0e0e0;
+}
+
+/* project details */
+.project-details {
+    opacity: 0; /* hide ang details before hovering */
+    padding-top: 10px;
+    text-align: center;
+    color: #e0e0e0;
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: opacity 0.3s ease, visibility 0s 0.3s; 
+}
+
+/* show details pag hover*/
+.project-preview:hover .project-details {
+    opacity: 1; 
+    visibility: visible;
+    transition: opacity 0.3s ease; /* fade in */
+}
+
+/* hover effect - adds a subtle zoom and shadow */
+.project-preview:hover {
+    transform: scale(1.05); /* zoom */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7); 
+}
+
+/* space between project previews */
+.project-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; 
+    flex-wrap: wrap; 
+    padding: 20px;
+}
+
+/* about section */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.about-picture {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #000000;
+}
+
+/* para project images/gifs */
+.preview-img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
